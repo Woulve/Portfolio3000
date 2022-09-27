@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Home from "pages/home/Home";
+import Navbar from "components/navbar/Navbar";
+import { item } from "interfaces/app/interfaces";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const items: item[] = [
+        {
+            id: 1,
+            url: "home",
+            title: "Home",
+        },
+        {
+            id: 2,
+            url: "portfolio",
+            title: "Portfolio",
+        },
+        {
+            id: 3,
+            url: "contact",
+            title: "Kontakt",
+        },
+    ];
+
+    console.log(window.location);
+    let component;
+    switch (window.location.pathname) {
+        case "/":
+            component = (
+                <>
+                    <Navbar items={items}></Navbar>
+                    <Home items={items}></Home>
+                </>
+            );
+            break;
+        case "/contact":
+            component = (
+                <>
+                    <Navbar items={items}></Navbar>
+                    <h1 style={{ marginTop: "40px" }}>AAAAAAAAAAAAAAAAAAAAAAA</h1>;
+                </>
+            );
+            break;
+    }
+
+    return (
+        <>
+            <div className="App">{component}</div>
+        </>
+    );
 }
 
 export default App;
