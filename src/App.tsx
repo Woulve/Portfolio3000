@@ -23,30 +23,12 @@ function App() {
         },
     ];
 
-    console.log(window.location);
-    let component;
-    switch (window.location.pathname) {
-        case "/":
-            component = (
-                <>
-                    <Navbar items={items}></Navbar>
-                    <Home items={items}></Home>
-                </>
-            );
-            break;
-        case "/contact":
-            component = (
-                <>
-                    <Navbar items={items}></Navbar>
-                    <h1 style={{ marginTop: "40px" }}>AAAAAAAAAAAAAAAAAAAAAAA</h1>;
-                </>
-            );
-            break;
-    }
-
     return (
         <>
-            <div className="App">{component}</div>
+            <div className="App">
+                <Navbar items={items}></Navbar>
+                <Home items={items}></Home>
+            </div>
         </>
     );
 }

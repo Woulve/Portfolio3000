@@ -16,7 +16,7 @@ const Navbar = (props: Props) => {
             <ul>
                 {props.items.map((menu) => (
                     <li>
-                        <Link to={menu.url} smooth={true} hashSpy={true} spy={true} offset={-40} duration={500}>
+                        <Link to={menu.url} smooth={true} hashSpy={true} offset={-80} spy={true} duration={500}>
                             {menu.title}
                         </Link>
                     </li>
