@@ -1,22 +1,19 @@
 import React from "react";
 import "./Navbar.scss";
 import { Link } from "react-scroll";
-import { item } from "interfaces/app/interfaces";
+import { linkItem } from "interfaces/app/interfaces";
 
 type Props = {
-    items: item[];
+    items: linkItem[];
 };
 
 const Navbar = (props: Props) => {
     return (
         <nav className="nav">
-            <a href="/" className="site-title">
-                Elias Cecetka
-            </a>
-            <ul>
+            <ul id="navItems">
                 {props.items.map((menu) => (
-                    <li>
-                        <Link to={menu.url} smooth={true} hashSpy={true} offset={-80} spy={true} duration={500}>
+                    <li key={menu.key}>
+                        <Link to={menu.url} smooth={true} hashSpy={true} spy={true} duration={500}>
                             {menu.title}
                         </Link>
                     </li>

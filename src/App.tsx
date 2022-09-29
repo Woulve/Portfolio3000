@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import "./App.scss";
 import Home from "pages/home/Home";
 import Navbar from "components/navbar/Navbar";
-import { item } from "interfaces/app/interfaces";
+import { linkItem } from "interfaces/app/interfaces";
 import type { Engine } from "tsparticles-engine";
 import { ISourceOptions } from "tsparticles-engine";
 import Particles from "react-tsparticles";
@@ -11,28 +11,28 @@ import { loadFull } from "tsparticles";
 
 function App() {
     const particlesInit = useCallback(async (engine: Engine) => {
-        console.log(engine);
-
-        // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
         await loadFull(engine);
     }, []);
 
-    const items: item[] = [
+    const items: linkItem[] = [
         {
-            id: 1,
-            url: "home",
-            title: "Home",
+            key: 1,
+            url: "About",
+            title: "Über mich",
         },
         {
-            id: 2,
-            url: "portfolio",
-            title: "Portfolio",
+            key: 2,
+            url: "Skills",
+            title: "Skills",
         },
         {
-            id: 3,
-            url: "contact",
+            key: 3,
+            url: "Career",
+            title: "Karriere",
+        },
+        {
+            key: 4,
+            url: "Contact",
             title: "Kontakt",
         },
     ];
