@@ -1,4 +1,8 @@
 version: '0.1'
 
 services: 
-  resume3000
+  resume3000:
+    build: .
+    container_name: resume3000
+    ports:
+      - 3001:3000
