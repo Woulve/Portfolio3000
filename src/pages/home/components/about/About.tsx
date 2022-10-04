@@ -10,12 +10,15 @@ const About = (props: Props) => {
 
   return (
     <div className="container" id="About">
+      <div className="backgroundBar"></div>
       <div className="content">
         <div id="aboutContainer">
           <img src={meImage} alt="Me" width="480px"></img>
           <div id="aboutText">
             <h1 className="content-header">Elias Cecetka</h1>
-            <h2>&#60; Fullstack Software Developer &#47;&#62;</h2>
+            <h2 className="glitch">
+              &#60; Fullstack Software Developer &#47;&#62;
+            </h2>
             {language === "ger" ? (
               <>
                 <p>

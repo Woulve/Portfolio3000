@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+
 * {
   margin: 0;
   padding: 0;
   color: white;
+  font-family: "Fira Mono";
 }
 
 body {

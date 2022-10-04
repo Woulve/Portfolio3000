@@ -1,13 +1,27 @@
+.backgroundBar {
+  position: absolute;
+  background-color: #1a1a1a63;
+  width: 100%;
+  transform: skew(0deg, -4deg);
+  height: 70%;
+  top: 15%;
+  z-index: -1;
+}
+
 #aboutContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto";
+  min-width: fit-content;
 
   h1 {
+    font-family: "Roboto", monospace;
     text-align: center;
-    white-space: nowrap;
+    letter-spacing: 0.1rem;
     font-size: 60px;
+    min-width: fit-content;
     font-weight: 600;
     background-image: radial-gradient(#553c9a, #ee4b2b);
     color: transparent;
@@ -17,10 +31,10 @@
 
   h2 {
     text-align: center;
-    white-space: nowrap;
     font-size: 20px;
+    min-width: fit-content;
     letter-spacing: 0.2rem;
-    font-family: monospace;
+
     font-weight: 600;
     background-image: radial-gradient(#553c9a, #ee4b2b);
     color: transparent;
@@ -28,15 +42,22 @@
     -webkit-background-clip: text;
   }
   #aboutText {
-    width: 30%;
-    margin: 4%;
+    width: 45%;
+    margin: 6%;
     p {
+      font-weight: 400;
+      text-shadow: 1px 1px #3f3838;
+      height: 100%;
       margin-top: 40px;
+      font-size: 1.2rem;
     }
   }
 }
 
 @media only screen and (max-width: 768px) {
+  .backgroundBar {
+    visibility: hidden;
+  }
   #aboutContainer {
     display: flex;
     flex-direction: column;
