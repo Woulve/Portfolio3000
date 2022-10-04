@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "App";
+import { motion } from "framer-motion";
 import "./About.scss";
 import meImage from "./me.png";
 
@@ -13,8 +14,20 @@ const About = (props: Props) => {
       <div className="backgroundBar"></div>
       <div className="content">
         <div id="aboutContainer">
-          <img src={meImage} alt="Me" width="480px"></img>
-          <div id="aboutText">
+          <motion.img
+            initial={{ x: -200 }}
+            animate={{ x: 0 }}
+            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+            src={meImage}
+            alt="Me"
+            width="480px"
+          ></motion.img>
+          <motion.div
+            initial={{ x: 200 }}
+            animate={{ x: 0 }}
+            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+            id="aboutText"
+          >
             <h1 className="content-header">Elias Cecetka</h1>
             <h2 className="glitch">
               &#60; Fullstack Software Developer &#47;&#62;
@@ -35,7 +48,7 @@ const About = (props: Props) => {
                 <p>The same but in english lol</p>
               </>
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
