@@ -1,14 +1,14 @@
 {
     "background": {
         "color": {
-            "value": "#111012"
+            "value": "#000"
         }
     },
     "fpsLimit": 60,
     "interactivity": {
         "events": {
             "onClick": {
-                "enable": true,
+                "enable": false,
                 "mode": "push"
             },
             "onHover": {

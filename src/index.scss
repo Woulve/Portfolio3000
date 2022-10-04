@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    color: white;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  margin: 0;
 }
 
 html::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
 }
