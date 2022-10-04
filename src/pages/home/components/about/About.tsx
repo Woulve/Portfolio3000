@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { LanguageContext } from "App";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import "./About.scss";
 import meImage from "./me.png";
+// import { useInView } from "react-intersection-observer";
 
 type Props = {};
 
@@ -15,17 +16,34 @@ const About = (props: Props) => {
       <div className="content">
         <div id="aboutContainer">
           <motion.img
-            initial={{ x: -200 }}
-            animate={{ x: 0 }}
-            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+            initial={{ x: -300, opacity: 0 }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                bounce: 0.2,
+                duration: 0.8,
+              },
+            }}
+            viewport={{ once: true }}
+            // viewport={{ once: true }}
             src={meImage}
             alt="Me"
             width="480px"
           ></motion.img>
           <motion.div
-            initial={{ x: 200 }}
-            animate={{ x: 0 }}
-            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+            initial={{ x: 300, opacity: 0 }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                bounce: 0.2,
+                duration: 0.9,
+              },
+            }}
+            viewport={{ once: true }}
             id="aboutText"
           >
             <h1 className="content-header">Elias Cecetka</h1>
