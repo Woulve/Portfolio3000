@@ -1,9 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { LanguageContext } from "App";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import "./About.scss";
 import meImage from "./me.png";
-// import { useInView } from "react-intersection-observer";
 
 type Props = {};
 
@@ -50,7 +49,7 @@ const About = (props: Props) => {
             <h2 className="glitch">
               &#60; Fullstack Software Developer &#47;&#62;
             </h2>
-            {language === "ger" ? (
+            {language === "de" ? (
               <>
                 <p>
                   Ich bin ein junger Fachinformatiker für Anwendungsentwicklung,
@@ -63,7 +62,13 @@ const About = (props: Props) => {
               </>
             ) : (
               <>
-                <p>The same but in english lol</p>
+                <p>
+                  I am a Junior Software Developer with experience in a variety
+                  of technological environments and a passion for technology and
+                  programming. Apart from my in-firm training, I gathered all my
+                  knowledge and programming skills, from STM32 Microcontroller
+                  Development to Fullstack Web development by myself.
+                </p>
               </>
             )}
           </motion.div>

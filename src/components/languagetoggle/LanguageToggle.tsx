@@ -8,7 +8,7 @@ const LanguageToggle = (props: Props) => {
   const { language, toggleLanguage } = useContext(LanguageContext);
   return (
     <button onClick={toggleLanguage} className="languageButton ">
-      {language === "ger" ? "EN" : "GER"}
+      {language === "de" ? "DE" : "EN"}
     </button>
   );
 };

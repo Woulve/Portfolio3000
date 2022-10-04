@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Skills.scss";
 import Typewriter from "typewriter-effect";
+import { LanguageContext } from "App";
 
 type Props = {};
 
 const Skills = (props: Props) => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className="container" id="Skills">
       <div className="content">
         <div id="skillsContainer">
           <div id="skillTypewriter">
-            <h1>Diese Seite nutzt&nbsp;</h1>
+            {language === "de" ? (
+              <h1>Diese Seite nutzt&nbsp;</h1>
+            ) : (
+              <h1>This Site uses&nbsp;</h1>
+            )}
             <Typewriter
               options={{
                 loop: true,

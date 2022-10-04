@@ -1,11 +1,12 @@
 .backgroundBar {
   position: absolute;
-  background-color: #1a1a1a63;
+  background-color: #42424225;
   width: 100%;
   transform: skew(0deg, -4deg);
   height: 70%;
   top: 15%;
   z-index: -1;
+  perspective: 2px;
 }
 
 #aboutContainer {

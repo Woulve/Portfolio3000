@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import { Link } from "react-scroll";
 import { linkItem } from "interfaces/app/interfaces";
 import { LanguageContext } from "App";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -30,7 +31,20 @@ const items: linkItem[] = [
 const Navbar = (props: Props) => {
   const { language } = useContext(LanguageContext);
   return (
-    <nav className="nav">
+    <motion.nav
+      initial={{ y: -10, opacity: 0 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          bounce: 0.2,
+          duration: 0.8,
+        },
+      }}
+      viewport={{ once: true }}
+      className="nav"
+    >
       <ul id="navItems">
         {items.map((menu) => (
           <li key={menu.key}>
@@ -41,12 +55,12 @@ const Navbar = (props: Props) => {
               spy={true}
               duration={500}
             >
-              {language === "ger" ? menu.titleger : menu.titleen}
+              {language === "de" ? menu.titleger : menu.titleen}
             </Link>
           </li>
         ))}
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 

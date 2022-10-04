@@ -10,7 +10,7 @@ import particlesOptions from "./particles.json";
 import { loadFull } from "tsparticles";
 
 interface LanguageContextProps {
-  language?: string;
+  language: "de" | "en";
   setLanguage?: React.Dispatch<React.SetStateAction<string>>;
   toggleLanguage?: () => void;
 }
@@ -22,13 +22,13 @@ function App() {
     await loadFull(engine);
   }, []);
 
-  const [language, setLanguage] = useState("ger");
+  const [language, setLanguage] = useState("de" as "de" | "en");
 
   const toggleLanguage = () => {
-    if (language === "ger") {
+    if (language === "de") {
       setLanguage("en");
     } else {
-      setLanguage("ger");
+      setLanguage("de");
     }
   };
 
