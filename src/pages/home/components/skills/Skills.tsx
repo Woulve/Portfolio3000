@@ -2,6 +2,18 @@ import React, { useContext } from "react";
 import "./Skills.scss";
 import Typewriter from "typewriter-effect";
 import { LanguageContext } from "App";
+import Carousel from "framer-motion-carousel";
+
+import { ReactComponent as ReactLogo } from "./icons/ReactLogo.svg";
+import { ReactComponent as JqueryLogo } from "./icons/JqueryLogo.svg";
+import { ReactComponent as DockerLogo } from "./icons/DockerLogo.svg";
+import { ReactComponent as TailwindcssLogo } from "./icons/TailwindcssLogo.svg";
+import { ReactComponent as PostcssLogo } from "./icons/PostcssLogo.svg";
+import { ReactComponent as NodejsLogo } from "./icons/NodejsLogo.svg";
+import { ReactComponent as SassLogo } from "./icons/SassLogo.svg";
+import { ReactComponent as TypescriptLogo } from "./icons/TypescriptLogo.svg";
+import { ReactComponent as FramerLogo } from "./icons/FramerLogo.svg";
+import { ReactComponent as JestLogo } from "./icons/JestLogo.svg";
 
 type Props = {};
 
@@ -47,12 +59,12 @@ const Skills = (props: Props) => {
                   .typeString("JQuery")
                   .pauseFor(2500)
                   .deleteChars(6)
-                  .typeString("FlexBox")
-                  .pauseFor(2500)
-                  .deleteChars(7)
                   .typeString("Docker")
                   .pauseFor(2500)
                   .deleteChars(7)
+                  .typeString("Framer Motion")
+                  .pauseFor(2500)
+                  .deleteChars(12)
                   .start();
               }}
             />
@@ -69,6 +81,18 @@ const Skills = (props: Props) => {
               ipsum dolors Lorems ipsum dolors Lorems ipsum dolors{" "}
             </p>
             <p>react tailwindcss postcss autoprefixer</p>
+          </div>
+          <div className="iconcarousel">
+            <ReactLogo className="logo" />
+            <JqueryLogo className="logo" />
+            <DockerLogo className="logo" />
+            <TailwindcssLogo className="logo" />
+            <PostcssLogo className="logo" />
+            <NodejsLogo className="logo" />
+            <SassLogo className="logo" />
+            <TypescriptLogo className="logo" />
+            <FramerLogo className="logo" />
+            <JestLogo className="logo" viewBox="0 0 300 270" />
           </div>
         </div>
       </div>
