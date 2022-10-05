@@ -1,0 +1,70 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.active {
+  opacity: 1;
+}
+.nactive {
+  opacity: 0.3;
+}
+
+.carouselcontainer {
+  min-width: fit-content;
+  position: relative;
+  width: 100vw;
+  height: 100px;
+  overflow-x: hidden;
+}
+
+.carouselclass {
+  display: flex;
+  justify-content: space-around;
+  min-width: fit-content;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  overflow-x: hidden;
+  left: 0%;
+  top: 0%;
+
+  animation: primary 27s linear infinite;
+
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carouselclass2 {
+  display: flex;
+  justify-content: space-around;
+  min-width: fit-content;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  overflow-x: hidden;
+  left: 0%;
+  top: 0%;
+
+  animation: secondary 27s linear infinite;
+}
+
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes secondary {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 00%;
+  }
+}

@@ -37,6 +37,7 @@ function App() {
       <LanguageContext.Provider value={{ language, toggleLanguage }}>
         <div className="App">
           <Particles
+            style={{ zIndex: "-100" }}
             id="tsparticles"
             options={particlesOptions as ISourceOptions}
             init={particlesInit}

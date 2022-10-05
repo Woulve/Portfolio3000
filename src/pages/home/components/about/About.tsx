@@ -25,7 +25,6 @@ const About = (props: Props) => {
                 duration: 0.8,
               },
             }}
-            viewport={{ once: true }}
             // viewport={{ once: true }}
             src={meImage}
             alt="Me"
@@ -42,7 +41,6 @@ const About = (props: Props) => {
                 duration: 0.9,
               },
             }}
-            viewport={{ once: true }}
             id="aboutText"
           >
             <h1 className="content-header">Elias Cecetka</h1>

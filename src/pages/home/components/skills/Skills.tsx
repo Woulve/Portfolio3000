@@ -1,24 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Skills.scss";
 import Typewriter from "typewriter-effect";
 import { LanguageContext } from "App";
-import Carousel from "framer-motion-carousel";
 
-import { ReactComponent as ReactLogo } from "./icons/ReactLogo.svg";
-import { ReactComponent as JqueryLogo } from "./icons/JqueryLogo.svg";
-import { ReactComponent as DockerLogo } from "./icons/DockerLogo.svg";
-import { ReactComponent as TailwindcssLogo } from "./icons/TailwindcssLogo.svg";
-import { ReactComponent as PostcssLogo } from "./icons/PostcssLogo.svg";
-import { ReactComponent as NodejsLogo } from "./icons/NodejsLogo.svg";
-import { ReactComponent as SassLogo } from "./icons/SassLogo.svg";
-import { ReactComponent as TypescriptLogo } from "./icons/TypescriptLogo.svg";
-import { ReactComponent as FramerLogo } from "./icons/FramerLogo.svg";
-import { ReactComponent as JestLogo } from "./icons/JestLogo.svg";
+import CarouselComponent from "./components/CarouselComponent";
 
 type Props = {};
 
 const Skills = (props: Props) => {
   const { language } = useContext(LanguageContext);
+  const [activeItem, setActiveItem] = useState("React");
 
   return (
     <div className="container" id="Skills">
@@ -38,33 +29,67 @@ const Skills = (props: Props) => {
               }}
               onInit={(typewriter) => {
                 typewriter
+                  .callFunction(() => {
+                    setActiveItem("React");
+                  })
                   .typeString("React")
                   .pauseFor(2500)
                   .deleteChars(5)
-                  .typeString("Typescript")
-                  .pauseFor(2500)
-                  .deleteChars(10)
-                  .typeString("Tailwind CSS")
-                  .pauseFor(2500)
-                  .deleteChars(12)
-                  .typeString("PostCSS")
-                  .pauseFor(2500)
-                  .deleteChars(7)
-                  .typeString("Sass")
-                  .pauseFor(2500)
-                  .deleteChars(4)
-                  .typeString("Node")
-                  .pauseFor(2500)
-                  .deleteChars(4)
+                  .callFunction(() => {
+                    setActiveItem("JQuery");
+                  })
                   .typeString("JQuery")
                   .pauseFor(2500)
                   .deleteChars(6)
+                  .callFunction(() => {
+                    setActiveItem("Docker");
+                  })
                   .typeString("Docker")
                   .pauseFor(2500)
-                  .deleteChars(7)
-                  .typeString("Framer Motion")
+                  .deleteChars(6)
+                  .callFunction(() => {
+                    setActiveItem("Tailwind CSS");
+                  })
+                  .typeString("Tailwind CSS")
                   .pauseFor(2500)
                   .deleteChars(12)
+                  .callFunction(() => {
+                    setActiveItem("PostCSS");
+                  })
+                  .typeString("PostCSS")
+                  .pauseFor(2500)
+                  .deleteChars(7)
+                  .callFunction(() => {
+                    setActiveItem("Node");
+                  })
+                  .typeString("Node")
+                  .pauseFor(2500)
+                  .deleteChars(4)
+                  .callFunction(() => {
+                    setActiveItem("Sass");
+                  })
+                  .typeString("Sass")
+                  .pauseFor(2500)
+                  .deleteChars(4)
+                  .callFunction(() => {
+                    setActiveItem("Typescript");
+                  })
+                  .typeString("Typescript")
+                  .pauseFor(2500)
+                  .deleteChars(10)
+                  .callFunction(() => {
+                    setActiveItem("Framer Motion");
+                  })
+                  .typeString("Framer Motion")
+                  .pauseFor(2500)
+                  .deleteChars(13)
+                  .callFunction(() => {
+                    setActiveItem("Jest JS");
+                  })
+                  .typeString("Jest JS")
+                  .pauseFor(2500)
+                  .deleteChars(7)
+
                   .start();
               }}
             />
@@ -78,22 +103,10 @@ const Skills = (props: Props) => {
               ipsum dolors Lorems ipsum dolors Lorems ipsum dolors Lorems ipsum
               dolors Lorems ipsum dolors Lorems ipsum dolors Lorems ipsum dolors
               Lorems ipsum dolors Lorems ipsum dolors Lorems ipsum dolors Lorems
-              ipsum dolors Lorems ipsum dolors Lorems ipsum dolors{" "}
+              ipsum dolors Lorems ipsum dolors Lorems ipsum dolors
             </p>
-            <p>react tailwindcss postcss autoprefixer</p>
           </div>
-          <div className="iconcarousel">
-            <ReactLogo className="logo" />
-            <JqueryLogo className="logo" />
-            <DockerLogo className="logo" />
-            <TailwindcssLogo className="logo" />
-            <PostcssLogo className="logo" />
-            <NodejsLogo className="logo" />
-            <SassLogo className="logo" />
-            <TypescriptLogo className="logo" />
-            <FramerLogo className="logo" />
-            <JestLogo className="logo" viewBox="0 0 300 270" />
-          </div>
+          <CarouselComponent activeItem={activeItem} />
         </div>
       </div>
     </div>
