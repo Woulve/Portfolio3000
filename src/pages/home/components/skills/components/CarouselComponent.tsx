@@ -12,9 +12,7 @@ import { ReactComponent as TypescriptLogo } from "./icons/TypescriptLogo.svg";
 import { ReactComponent as FramerLogo } from "./icons/FramerLogo.svg";
 import { ReactComponent as JestLogo } from "./icons/JestLogo.svg";
 
-type Props = {
-  activeItem: string;
-};
+type Props = {};
 
 const CarouselComponent = (props: Props) => {
   return (
@@ -24,39 +22,19 @@ const CarouselComponent = (props: Props) => {
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "React" ? "logo active" : "logo nactive"
-          }
         >
           <ReactLogo className="logo" />
         </a>
-        <a
-          href="https://jquery.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "JQuery" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
           <JqueryLogo className="logo" />
         </a>
-        <a
-          href="https://docker.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "Docker" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://docker.com" target="_blank" rel="noopener noreferrer">
           <DockerLogo className="logo" />
         </a>
         <a
           href="https://tailwindcss.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Tailwind CSS" ? "logo active" : "logo nactive"
-          }
         >
           <TailwindcssLogo className="logo" />
         </a>
@@ -64,29 +42,16 @@ const CarouselComponent = (props: Props) => {
           href="https://postcss.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "PostCSS" ? "logo active" : "logo nactive"
-          }
         >
           <PostcssLogo className="logo" />
         </a>
-        <a
-          href="https://nodejs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "Node" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">
           <NodejsLogo className="logo" />
         </a>
         <a
           href="https://sass-lang.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Sass" ? "logo active" : "logo nactive"
-          }
         >
           <SassLogo className="logo" />
         </a>
@@ -94,9 +59,6 @@ const CarouselComponent = (props: Props) => {
           href="https://www.typescriptlang.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Typescript" ? "logo active" : "logo nactive"
-          }
         >
           <TypescriptLogo className="logo" />
         </a>
@@ -104,22 +66,10 @@ const CarouselComponent = (props: Props) => {
           href="https://www.framer.com/motion/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Framer Motion"
-              ? "logo active"
-              : "logo nactive"
-          }
         >
           <FramerLogo className="logo" />
         </a>
-        <a
-          href="https://jestjs.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "Jest JS" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">
           <JestLogo className="logo" viewBox="0 0 300 270" />
         </a>
       </div>
@@ -128,39 +78,19 @@ const CarouselComponent = (props: Props) => {
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "React" ? "logo active" : "logo nactive"
-          }
         >
           <ReactLogo className="logo" />
         </a>
-        <a
-          href="https://jquery.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "JQuery" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
           <JqueryLogo className="logo" />
         </a>
-        <a
-          href="https://docker.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "Docker" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://docker.com" target="_blank" rel="noopener noreferrer">
           <DockerLogo className="logo" />
         </a>
         <a
           href="https://tailwindcss.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Tailwind CSS" ? "logo active" : "logo nactive"
-          }
         >
           <TailwindcssLogo className="logo" />
         </a>
@@ -168,29 +98,16 @@ const CarouselComponent = (props: Props) => {
           href="https://postcss.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "PostCSS" ? "logo active" : "logo nactive"
-          }
         >
           <PostcssLogo className="logo" />
         </a>
-        <a
-          href="https://nodejs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "Node" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">
           <NodejsLogo className="logo" />
         </a>
         <a
           href="https://sass-lang.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Sass" ? "logo active" : "logo nactive"
-          }
         >
           <SassLogo className="logo" />
         </a>
@@ -198,9 +115,6 @@ const CarouselComponent = (props: Props) => {
           href="https://www.typescriptlang.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Typescript" ? "logo active" : "logo nactive"
-          }
         >
           <TypescriptLogo className="logo" />
         </a>
@@ -208,22 +122,10 @@ const CarouselComponent = (props: Props) => {
           href="https://www.framer.com/motion/"
           target="_blank"
           rel="noopener noreferrer"
-          className={
-            props.activeItem === "Framer Motion"
-              ? "logo active"
-              : "logo nactive"
-          }
         >
           <FramerLogo className="logo" />
         </a>
-        <a
-          href="https://jestjs.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={
-            props.activeItem === "Jest JS" ? "logo active" : "logo nactive"
-          }
-        >
+        <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">
           <JestLogo className="logo" viewBox="0 0 300 270" />
         </a>
       </div>

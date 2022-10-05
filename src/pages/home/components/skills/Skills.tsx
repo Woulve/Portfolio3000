@@ -9,7 +9,6 @@ type Props = {};
 
 const Skills = (props: Props) => {
   const { language } = useContext(LanguageContext);
-  const [activeItem, setActiveItem] = useState("React");
 
   return (
     <div className="container" id="Skills">
@@ -29,64 +28,44 @@ const Skills = (props: Props) => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .callFunction(() => {
-                    setActiveItem("React");
-                  })
-                  .typeString("React")
-                  .pauseFor(2500)
-                  .deleteChars(5)
-                  .callFunction(() => {
-                    setActiveItem("JQuery");
-                  })
-                  .typeString("JQuery")
-                  .pauseFor(2500)
-                  .deleteChars(6)
-                  .callFunction(() => {
-                    setActiveItem("Docker");
-                  })
-                  .typeString("Docker")
-                  .pauseFor(2500)
-                  .deleteChars(6)
-                  .callFunction(() => {
-                    setActiveItem("Tailwind CSS");
-                  })
-                  .typeString("Tailwind CSS")
-                  .pauseFor(2500)
-                  .deleteChars(12)
-                  .callFunction(() => {
-                    setActiveItem("PostCSS");
-                  })
-                  .typeString("PostCSS")
-                  .pauseFor(2500)
-                  .deleteChars(7)
-                  .callFunction(() => {
-                    setActiveItem("Node");
-                  })
+
                   .typeString("Node")
                   .pauseFor(2500)
                   .deleteChars(4)
-                  .callFunction(() => {
-                    setActiveItem("Sass");
-                  })
+
                   .typeString("Sass")
                   .pauseFor(2500)
                   .deleteChars(4)
-                  .callFunction(() => {
-                    setActiveItem("Typescript");
-                  })
+
                   .typeString("Typescript")
                   .pauseFor(2500)
                   .deleteChars(10)
-                  .callFunction(() => {
-                    setActiveItem("Framer Motion");
-                  })
+
                   .typeString("Framer Motion")
                   .pauseFor(2500)
                   .deleteChars(13)
-                  .callFunction(() => {
-                    setActiveItem("Jest JS");
-                  })
+
                   .typeString("Jest JS")
+                  .pauseFor(2500)
+                  .deleteChars(7)
+
+                  .typeString("React")
+                  .pauseFor(2500)
+                  .deleteChars(5)
+
+                  .typeString("JQuery")
+                  .pauseFor(2500)
+                  .deleteChars(6)
+
+                  .typeString("Docker")
+                  .pauseFor(2500)
+                  .deleteChars(6)
+
+                  .typeString("Tailwind CSS")
+                  .pauseFor(2500)
+                  .deleteChars(12)
+
+                  .typeString("PostCSS")
                   .pauseFor(2500)
                   .deleteChars(7)
 
@@ -106,7 +85,7 @@ const Skills = (props: Props) => {
               ipsum dolors Lorems ipsum dolors Lorems ipsum dolors
             </p>
           </div>
-          <CarouselComponent activeItem={activeItem} />
+          <CarouselComponent />
         </div>
       </div>
     </div>
