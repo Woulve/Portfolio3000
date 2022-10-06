@@ -31,23 +31,31 @@
   // margin-bottom: 80px;
 }
 
+.Typewriter {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+  flex-direction: row;
+}
+
 .skillTypewriter {
-  // position: absolute;
   width: 100vw;
   display: flex;
-  height: 220px;
-  // backdrop-filter: blur(9px);
-  // background-color: rgba(73, 73, 73, 0.096);
+  // height: 220px;
+  margin-bottom: 40px;
   justify-content: center;
-  //   margin-left: 58%;
-  align-items: center;
   flex-wrap: wrap;
-  // width: 100%;
-  // height: 150px;
+
   h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 70px;
     white-space: nowrap;
     font-weight: 600;
+    width: 100%;
+    height: fit-content;
     background-image: radial-gradient(#553c9a, #ee4b2b);
     color: transparent;
     background-clip: text;
@@ -76,46 +84,18 @@
 @media (orientation: portrait) {
   .skillTypewriter {
     margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-
-    // margin-left: 50%;
-    align-items: center;
-
-    // width: 100%;
-    // height: 150px;
-
+    flex-direction: row;
     h1 {
       font-size: 30px;
-      white-space: nowrap;
-      font-weight: 600;
-      background-image: radial-gradient(#553c9a, #ee4b2b);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
     }
     .Typewriter__wrapper {
-      white-space: nowrap;
       font-size: 60px;
-      font-weight: 600;
-      background-image: radial-gradient(#553c9a, #ee4b2b);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
     }
     .Typewriter__cursor {
-      white-space: nowrap;
       font-size: 60px;
-      font-weight: 600;
-      background-image: radial-gradient(#553c9a, #ee4b2b);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
     }
   }
-
   .skilltextcontainer {
-    display: flex;
     flex-direction: column;
   }
 }
