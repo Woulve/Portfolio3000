@@ -4,7 +4,7 @@
             "value": "#000"
         }
     },
-    "fpsLimit": 60,
+    "fpsLimit": 16,
     "interactivity": {
         "events": {
             "onClick": {
@@ -15,7 +15,7 @@
                 "enable": true,
                 "mode": "repulse"
             },
-            "resize": true
+            "resize": false
         },
         "modes": {
             "bubble": {
@@ -39,13 +39,13 @@
         },
         "links": {
             "color": "#ffffff",
-            "distance": 170,
+            "distance": 140,
             "enable": true,
-            "opacity": 0.5,
+            "opacity": 0.7,
             "width": 1
         },
         "collisions": {
-            "enable": true
+            "enable": false
         },
         "move": {
             "direction": "none",
@@ -58,7 +58,7 @@
         "number": {
             "density": {
                 "enable": true,
-                "value_area": 900
+                "value_area": 500
             },
             "value": 60
         },
@@ -73,5 +73,5 @@
             "value": 2
         }
     },
-    "detectRetina": true
+    "detectRetina": false
 }

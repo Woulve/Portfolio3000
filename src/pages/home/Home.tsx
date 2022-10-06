@@ -14,10 +14,11 @@ const Home = () => {
       } else {
         setbarval("|");
       }
-    }, 200);
+    }, 500);
 
-    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+    return () => clearInterval(interval);
   }, [barval]);
+
   return (
     <>
       <Helmet>
