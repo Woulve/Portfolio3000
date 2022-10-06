@@ -3,7 +3,6 @@ import { LanguageContext } from "App";
 import { motion } from "framer-motion";
 import "./About.scss";
 import meImage from "./me.png";
-import { isMobile } from "react-device-detect";
 
 type Props = {};
 
