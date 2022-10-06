@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useState } from "react";
+import React, { createContext, useState, useCallback } from "react";
 import "./App.scss";
 import Home from "pages/home/Home";
 import Navbar from "components/navbar/Navbar";

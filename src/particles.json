@@ -4,7 +4,7 @@
             "value": "#000"
         }
     },
-    "fpsLimit": 16,
+    "fpsLimit": 60,
     "interactivity": {
         "events": {
             "onClick": {
@@ -39,7 +39,7 @@
         },
         "links": {
             "color": "#ffffff",
-            "distance": 140,
+            "distance": 200,
             "enable": true,
             "opacity": 0.7,
             "width": 1
@@ -57,8 +57,8 @@
         },
         "number": {
             "density": {
-                "enable": true,
-                "value_area": 500
+                "enable": false,
+                "value_area": 200
             },
             "value": 60
         },
