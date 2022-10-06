@@ -4,7 +4,6 @@ import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import { Helmet } from "react-helmet";
-import Typewriter from "typewriter-effect";
 
 const Home = () => {
   const [barval, setbarval] = useState("|");
