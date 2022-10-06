@@ -58,7 +58,7 @@
         "number": {
             "density": {
                 "enable": false,
-                "value_area": 200
+                "value_area": 900
             },
             "value": 60
         },

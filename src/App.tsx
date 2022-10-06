@@ -7,7 +7,7 @@ import type { Engine } from "tsparticles-engine";
 import { ISourceOptions } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import particlesOptions from "./particles.json";
-import { BrowserView } from "react-device-detect";
+// import { BrowserView } from "react-device-detect";
 import { loadFull } from "tsparticles";
 
 interface LanguageContextProps {
@@ -37,13 +37,11 @@ function App() {
     <>
       <LanguageContext.Provider value={{ language, toggleLanguage }}>
         <div className="App">
-          <BrowserView>
-            <Particles
-              id="tsparticles"
-              options={particlesOptions as ISourceOptions}
-              init={particlesInit}
-            />
-          </BrowserView>
+          <Particles
+            id="tsparticles"
+            options={particlesOptions as ISourceOptions}
+            init={particlesInit}
+          />
           <Navbar></Navbar>
           <LanguageToggle />
           <Home />
