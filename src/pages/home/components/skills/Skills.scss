@@ -166,24 +166,21 @@
     }
   }
 
-  .skilltable {
-    // font-size: small;
-    // height: ;
-  }
-  .skilltextcontainer {
-    // backdrop-filter: blur(9px);
-    display: flex;
-    // justify-content: center;
-    flex-direction: column;
-    // margin: 0px;
-    // width: 95vw;
+  .skillitemslist {
+    position: absolute;
+    z-index: 20;
+    width: fit-content;
+    margin-right: 30px;
+    font-size: small;
+    font-weight: 100;
+    .skillitem {
+      margin-top: 9.2px;
+      margin-left: 5px;
+    }
   }
 
-  // .skilltextright {
-  //   position: relative;
-  //   width: 100%;
-  //   p {
-  //     margin-top: 100px;
-  //   }
-  // }
+  .skilltextcontainer {
+    display: flex;
+    flex-direction: column;
+  }
 }
