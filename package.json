@@ -12,6 +12,7 @@
         "@types/react": "^18.0.21",
         "@types/react-dom": "^18.0.6",
         "@types/react-scroll": "^1.8.4",
+        "firebase": "^9.10.0",
         "framer-motion": "^7.5.2",
         "no-darkreader": "^1.0.3",
         "postcss-cli": "^10.0.0",
