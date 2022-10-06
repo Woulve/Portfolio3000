@@ -10,6 +10,29 @@ import particlesOptions from "./particles.json";
 // import { BrowserView } from "react-device-detect";
 import { loadFull } from "tsparticles";
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC0vfVZ1dEhxIs4Rh87e6y0DeqNxSYOgHQ",
+
+  authDomain: "cecetkatech-44e2c.firebaseapp.com",
+
+  projectId: "cecetkatech",
+
+  storageBucket: "cecetkatech.appspot.com",
+
+  messagingSenderId: "275863905201",
+
+  appId: "1:275863905201:web:e4671fffe8adcc37d29390",
+
+  measurementId: "G-3SHPL20FYL",
+};
+
+const app = initializeApp(firebaseConfig);
+
+getAnalytics(app);
+
 interface LanguageContextProps {
   language: "de" | "en";
   setLanguage?: React.Dispatch<React.SetStateAction<string>>;
