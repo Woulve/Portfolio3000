@@ -4,11 +4,12 @@ import Home from "pages/home/Home";
 import Navbar from "components/navbar/Navbar";
 import LanguageToggle from "components/languagetoggle/LanguageToggle";
 import type { Engine } from "tsparticles-engine";
+import { BrowserView } from "react-device-detect";
+
 import { ISourceOptions } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import particlesOptions from "./particles.json";
-import { BrowserView } from "react-device-detect";
-import { loadFull } from "tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -43,7 +44,7 @@ export const LanguageContext = createContext({} as LanguageContextProps);
 
 function App() {
   const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   const [language, setLanguage] = useState("de" as "de" | "en");
