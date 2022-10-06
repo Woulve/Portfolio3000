@@ -77,7 +77,7 @@ const Skills = (props: Props) => {
           <CarouselComponent />
           <div className="skilltextcontainer">
             <div className="skilltable flex flex-row font-bold">
-              <ul>
+              <ul className="skillitemslist">
                 <li className="skillitem">
                   <h3>C</h3>
                 </li>
@@ -91,10 +91,10 @@ const Skills = (props: Props) => {
                   <h3>Javascript/React</h3>
                 </li>
                 <li className="skillitem">
-                  <h3>Python</h3>
+                  <h3>Docker</h3>
                 </li>
                 <li className="skillitem">
-                  <h3>Docker</h3>
+                  <h3>Python</h3>
                 </li>
                 <li className="skillitem">
                   <h3>Java</h3>
@@ -109,10 +109,10 @@ const Skills = (props: Props) => {
                   <h3>Lua</h3>
                 </li>
               </ul>
-              <div className="skillbartext">
+              <div className="skillbars">
                 <ul>
                   <li>
-                    <SkillBar skill={85} />
+                    <SkillBar skill={80} />
                   </li>
                   <li>
                     <SkillBar skill={78} />
@@ -121,10 +121,10 @@ const Skills = (props: Props) => {
                     <SkillBar skill={74} />
                   </li>
                   <li>
-                    <SkillBar skill={70} />
+                    <SkillBar skill={67} />
                   </li>
                   <li>
-                    <SkillBar skill={50} />
+                    <SkillBar skill={65} />
                   </li>
                   <li>
                     <SkillBar skill={50} />
@@ -176,10 +176,17 @@ const Skills = (props: Props) => {
               </div>
             </div>
             <div className="skilltextright">
-              <p>
-                Diese Website benutzt eine Vielzahl an modernen Technologien und
-                Frameworks, ist performant, und Mobile-Optimiert.
-              </p>
+              {language === "de" ? (
+                <p>
+                  Diese Website benutzt eine Vielzahl an modernen Technologien
+                  und Frameworks, ist performant, und Mobile-Fähig.
+                </p>
+              ) : (
+                <p>
+                  This Website uses a number of modern Technologies and
+                  Frameworks, is performant and Mobile-Capable.
+                </p>
+              )}
             </div>
           </div>
         </div>

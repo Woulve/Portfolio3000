@@ -1,5 +1,7 @@
 .fullbar {
   z-index: 5;
+  // width: 80%;
+  margin-right: 30px;
   background: rgba(27, 27, 27, 0.911);
   background-size: 400px 100%;
   border-radius: 2px 15px 15px 2px;
@@ -8,20 +10,25 @@
 .skillbar {
   z-index: 6;
   background: linear-gradient(
-    90deg,
-    rgb(28, 0, 36) 40px,
-    rgba(121, 9, 117, 1) 200px,
-    rgb(138, 36, 48) 400px
+    to right,
+    rgb(28, 0, 36),
+    rgba(121, 9, 61, 0.979)
   );
-  background-size: 400px 100%;
+  // background-size: 400px 100%;
   border-radius: 2px 15px 15px 2px;
-}
-
-ul li {
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .skillitem {
   display: flex;
+}
+
+@media (orientation: portrait) {
+  .fullbar {
+    z-index: 5;
+    width: 100%;
+    // margin-right: 30px;
+    background: rgba(27, 27, 27, 0.911);
+    background-size: 400px 100%;
+    border-radius: 2px 15px 15px 2px;
+  }
 }

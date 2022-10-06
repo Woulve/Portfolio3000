@@ -7,7 +7,7 @@
 
 .carouselcontainer {
   display: flex;
-  margin-top: 70px;
+  // margin-top: 70px;
   margin-bottom: 50px;
   // background-color: rgba(15, 15, 15, 0.164);
   backdrop-filter: blur(7px);
@@ -19,8 +19,8 @@
 }
 
 .carouselclass {
-  // display: flex;
-  display: none;
+  display: flex;
+  // display: none;
   justify-content: space-around;
   align-items: center;
   min-width: fit-content;
@@ -39,8 +39,8 @@
 }
 
 .carouselclass2 {
-  // display: flex;
-  display: none;
+  display: flex;
+  // display: none;
   justify-content: space-around;
   align-items: center;
   min-width: fit-content;

@@ -8,11 +8,11 @@ type Props = {
 
 const SkillBar = (props: Props) => {
   return (
-    <div className="fullbar relative w-[400px]">
+    <div className="fullbar relative">
       <motion.div
         initial={{ width: 0 }}
         whileInView={{
-          width: props.skill * 4,
+          width: `${props.skill}%`,
           transition: {
             duration: 0.8,
           },
