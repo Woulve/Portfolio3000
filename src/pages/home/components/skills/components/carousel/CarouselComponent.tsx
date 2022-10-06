@@ -1,9 +1,9 @@
 import React from "react";
 import "./CarouselComponent.scss";
+import { motion } from "framer-motion";
 
 import { ReactComponent as ReactLogo } from "./icons/ReactLogo.svg";
 import { ReactComponent as JqueryLogo } from "./icons/JqueryLogo.svg";
-import { ReactComponent as DockerLogo } from "./icons/DockerLogo.svg";
 import { ReactComponent as TailwindcssLogo } from "./icons/TailwindcssLogo.svg";
 import { ReactComponent as PostcssLogo } from "./icons/PostcssLogo.svg";
 import { ReactComponent as NodejsLogo } from "./icons/NodejsLogo.svg";
@@ -16,7 +16,19 @@ type Props = {};
 
 const CarouselComponent = (props: Props) => {
   return (
-    <div className="carouselcontainer">
+    <motion.div
+      className="carouselcontainer"
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          bounce: 0.2,
+          duration: 0.8,
+        },
+      }}
+    >
       <div className="carouselclass">
         <a
           href="https://reactjs.org/"
@@ -27,9 +39,6 @@ const CarouselComponent = (props: Props) => {
         </a>
         <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
           <JqueryLogo className="logo" />
-        </a>
-        <a href="https://docker.com" target="_blank" rel="noopener noreferrer">
-          <DockerLogo className="logo" />
         </a>
         <a
           href="https://tailwindcss.com/"
@@ -84,9 +93,6 @@ const CarouselComponent = (props: Props) => {
         <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
           <JqueryLogo className="logo" />
         </a>
-        <a href="https://docker.com" target="_blank" rel="noopener noreferrer">
-          <DockerLogo className="logo" />
-        </a>
         <a
           href="https://tailwindcss.com/"
           target="_blank"
@@ -129,7 +135,7 @@ const CarouselComponent = (props: Props) => {
           <JestLogo className="logo" viewBox="0 0 300 270" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

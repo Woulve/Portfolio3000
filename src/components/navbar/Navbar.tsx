@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { linkItem } from "interfaces/app/interfaces";
 import { LanguageContext } from "App";
 import { motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
 
@@ -43,7 +44,7 @@ const Navbar = (props: Props) => {
       //   },
       // }}
       // viewport={{ once: true }}
-      className="nav"
+      className={isMobile ? "nav mobile" : "nav"}
     >
       <ul id="navItems">
         {items.map((menu) => (

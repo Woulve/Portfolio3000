@@ -7,7 +7,7 @@ import Contact from "./components/contact/Contact";
 const Home = () => {
   return (
     <>
-      <div className="blur"></div>
+      <div className="blurred"></div>
       <About></About>
       <Skills></Skills>
       <Contact></Contact>

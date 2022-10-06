@@ -1,0 +1,27 @@
+.fullbar {
+  z-index: 5;
+  background: rgba(27, 27, 27, 0.911);
+  background-size: 400px 100%;
+  border-radius: 2px 15px 15px 2px;
+}
+
+.skillbar {
+  z-index: 6;
+  background: linear-gradient(
+    90deg,
+    rgb(28, 0, 36) 40px,
+    rgba(121, 9, 117, 1) 200px,
+    rgb(138, 36, 48) 400px
+  );
+  background-size: 400px 100%;
+  border-radius: 2px 15px 15px 2px;
+}
+
+ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.skillitem {
+  display: flex;
+}

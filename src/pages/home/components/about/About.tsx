@@ -3,6 +3,7 @@ import { LanguageContext } from "App";
 import { motion } from "framer-motion";
 import "./About.scss";
 import meImage from "./me.png";
+import { isMobile } from "react-device-detect";
 
 type Props = {};
 
@@ -12,6 +13,7 @@ const About = (props: Props) => {
   return (
     <div className="container" id="About">
       <div className="backgroundBar"></div>
+
       <div className="content">
         <div id="aboutContainer">
           <motion.img
@@ -25,7 +27,7 @@ const About = (props: Props) => {
                 duration: 0.8,
               },
             }}
-            // viewport={{ once: true }}
+            viewport={{ once: true }}
             src={meImage}
             alt="Me"
             width="480px"

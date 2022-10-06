@@ -1,12 +1,14 @@
 .backgroundBar {
   position: absolute;
   background-color: #42424225;
+  backdrop-filter: blur(8px);
   width: 100%;
   transform: skew(0deg, -4deg);
+  width: 100vw;
+  max-width: 100%;
   height: 70%;
   top: 15%;
-  z-index: -1;
-  perspective: 2px;
+  z-index: -10;
 }
 
 #aboutContainer {
@@ -14,6 +16,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
   font-family: "Roboto";
   min-width: fit-content;
 
@@ -55,9 +58,9 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media (orientation: portrait) {
   .backgroundBar {
-    visibility: hidden;
+    display: none;
   }
   #aboutContainer {
     display: flex;
