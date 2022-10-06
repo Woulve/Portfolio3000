@@ -44,7 +44,7 @@ const About = (props: Props) => {
             }}
             id="aboutText"
           >
-            <h1 className="content-header">Elias Cecetkat</h1>
+            <h1 className="content-header">Elias Cecetka</h1>
             <h2 className="glitch">
               &#60; Fullstack Software Developer &#47;&#62;
             </h2>
