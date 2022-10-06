@@ -1,0 +1,66 @@
+.skilltable {
+  backdrop-filter: blur(9px);
+  width: 100%;
+  margin-bottom: 90px;
+  .skillitemslist {
+    width: fit-content;
+    margin-right: 30px;
+  }
+
+  .skillbars {
+    width: 100%;
+    position: relative;
+  }
+
+  ul li {
+    // height: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .chart-levels {
+    // position: absolute;
+    position: absolute;
+    width: 100%;
+    // bottom: -30%;
+    bottom: 70%;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    .levelbar {
+      // position: absolute;
+      height: 490%;
+      // height: 200%;
+      width: 3px;
+      background-color: #36363679;
+      border-radius: 5px;
+    }
+    li {
+      min-width: 0;
+      flex: 1 1 0;
+      .leveltext {
+        // flex-shrink: 1;
+        // width: 100%;
+        margin-top: 30px;
+
+        display: inline-block;
+        transform: rotate(40deg);
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .skillitemslist {
+    position: absolute;
+    z-index: 20;
+    width: fit-content;
+    margin-right: 30px;
+    font-size: small;
+    font-weight: 100;
+    .skillitem {
+      margin-top: 9.2px;
+      margin-left: 5px;
+    }
+  }
+}
