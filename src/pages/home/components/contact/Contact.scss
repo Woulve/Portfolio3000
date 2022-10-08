@@ -23,6 +23,10 @@
     width: 100%;
   }
 
+  .mailwarningtext {
+    color: red;
+  }
+
   .contactform {
     display: flex;
     flex-direction: column;
@@ -81,7 +85,7 @@
     width: 100%;
   }
 
-  .glow {
+  .sendbtn {
     width: 220px;
     height: 50px;
     border: none;
@@ -92,6 +96,10 @@
     position: relative;
     z-index: 0;
     border-radius: 10px;
+  }
+  .btndisabled {
+    background: #31313154;
+    color: #63636354;
   }
 
   .glow:before {

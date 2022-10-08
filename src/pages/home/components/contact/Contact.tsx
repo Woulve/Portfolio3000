@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import { LanguageContext } from "App";
@@ -10,12 +10,48 @@ type Props = {};
 
 const Contact = (props: Props) => {
   const { language } = useContext(LanguageContext);
+
+  const [sendButtonActive, setSendButtonActive] = useState(false);
+  const [mailError, setMailError] = useState(false);
+
+  const [formValues, setFormValues] = useState({
+    from_name: "",
+    reply_to: "",
+    message: "",
+  });
+
   const [result, setResult] = useState({ error: -1, text: "" });
 
-  const validate = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormChange = (e: any) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  useEffect(() => {
+    if (
+      formValues.from_name !== "" &&
+      formValues.message !== "" &&
+      formValues.reply_to !== ""
+    ) {
+      setSendButtonActive(true);
+    } else {
+      setSendButtonActive(false);
+    }
+  }, [formValues]);
+
+  const validate_send = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log(e.target);
-    sendEmail(e);
+    const validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (formValues.reply_to.match(validRegex)) {
+      setMailError(false);
+      sendEmail(e);
+      setSendButtonActive(false);
+    } else {
+      setMailError(true);
+    }
   };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -63,7 +99,7 @@ const Contact = (props: Props) => {
             </>
           )}
 
-          <form onSubmit={validate}>
+          <form onSubmit={validate_send}>
             <div className="contactform">
               <div className="personinfo">
                 <label>
@@ -72,12 +108,15 @@ const Contact = (props: Props) => {
                 </label>
                 {language === "de" ? (
                   <input
+                    value={formValues.from_name}
+                    onChange={handleFormChange}
                     type="text"
                     placeholder="z.B. Max Mustermann"
                     name="from_name"
                   />
                 ) : (
                   <input
+                    value={formValues.from_name}
                     type="text"
                     placeholder="e.g. Max Mustermann"
                     name="from_name"
@@ -88,10 +127,23 @@ const Contact = (props: Props) => {
                   Email
                 </label>
                 <input
-                  type="email"
+                  value={formValues.reply_to}
+                  onChange={handleFormChange}
+                  type="text"
                   placeholder="email@domain.com"
                   name="reply_to"
                 />
+                <div className="mailwarning">
+                  {mailError ? (
+                    language === "de" ? (
+                      <p className="mailwarningtext">E-Mail nicht valide!</p>
+                    ) : (
+                      <p className="mailwarningtext">E-Mail invalid!</p>
+                    )
+                  ) : (
+                    <></>
+                  )}
+                </div>
               </div>
               <div className="message">
                 {language === "de" ? (
@@ -108,12 +160,16 @@ const Contact = (props: Props) => {
 
                 {language === "de" ? (
                   <TextareaAutosize
+                    value={formValues.message}
+                    onChange={handleFormChange}
                     className="textarea"
                     name="message"
                     placeholder="z.B. Du bist eingestellt!"
                   />
                 ) : (
                   <TextareaAutosize
+                    value={formValues.message}
+                    onChange={handleFormChange}
                     className="textarea"
                     name="message"
                     placeholder="e.g. we want to hire you on the spot!"
@@ -121,11 +177,25 @@ const Contact = (props: Props) => {
                 )}
               </div>
               {language === "de" ? (
-                <button className="glow" type="submit">
-                  Senden
+                sendButtonActive ? (
+                  <button className="sendbtn glow" type="submit">
+                    Senden
+                  </button>
+                ) : (
+                  <button
+                    className="sendbtn btndisabled"
+                    type="submit"
+                    disabled
+                  >
+                    Senden
+                  </button>
+                )
+              ) : sendButtonActive ? (
+                <button className="sendbtn glow" type="submit">
+                  Send
                 </button>
               ) : (
-                <button className="glow" type="submit">
+                <button className="sendbtn btndisabled" type="submit" disabled>
                   Send
                 </button>
               )}
