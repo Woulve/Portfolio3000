@@ -140,34 +140,17 @@
 
   .glow:before {
     content: "";
-    background: linear-gradient(
-      45deg,
-      #f10606,
-      #f5730a,
-      #e2de03,
-      #46e606,
-      #06f7cf,
-      #0529df,
-      #7f10f7,
-      #f10cc0,
-      #d30303
-    );
+    background: linear-gradient(90deg, #8d0707, #ff00c8);
     position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
+    top: -3px;
+    left: -3px;
     z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
+    filter: blur(3px);
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-  }
-
-  .glow:active {
-    color: #000;
+    border-radius: 12px;
   }
 
   .glow:active:after {
@@ -188,17 +171,6 @@
     left: 0;
     top: 0;
     border-radius: 10px;
-  }
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
   }
 }
 
