@@ -5,6 +5,7 @@ import { LanguageContext } from "App";
 import TextareaAutosize from "react-textarea-autosize";
 import { FiMail, FiUser, FiMessageSquare } from "react-icons/fi";
 import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { ReactComponent as XingIcon } from "./xing-icon.svg";
 
 type Props = {};
 
@@ -202,6 +203,35 @@ const Contact = (props: Props) => {
               )}
             </div>
           </form>
+          <div className="othercontact">
+            <div className="flex mailcontact">
+              {language === "de" ? (
+                <p className="mr-3">Direkt via E-Mail:</p>
+              ) : (
+                <p className="mr-3">Directly via E-Mail:</p>
+              )}
+
+              <a href="mailto:contact@elias-cecetka.tech">
+                contact@elias-cecetka.tech
+              </a>
+            </div>
+            <div className="flex items-center m-3 xingcontact">
+              {language === "de" ? (
+                <p className="mr-3">Oder auf Xing:</p>
+              ) : (
+                <p className="mr-3">Or on Xing:</p>
+              )}
+
+              <a
+                className="w-[60px] h-[60px]"
+                href="https://www.xing.com/profile/Elias_Cecetka/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <XingIcon className="w-[60px] h-[60px]" />
+              </a>
+            </div>
+          </div>
           <LazyMotion features={domAnimation}>
             <AnimatePresence>
               {result.error !== -1 ? (

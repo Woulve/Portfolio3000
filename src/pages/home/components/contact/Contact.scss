@@ -202,6 +202,14 @@
   }
 }
 
+.othercontact {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (orientation: portrait) {
   .contactcontent {
     .formheader {
@@ -224,5 +232,17 @@
     margin-right: 5%;
     margin-left: 5%;
     top: 3%;
+  }
+
+  .mailcontact {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .xingcontact {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
   }
 }
