@@ -91,8 +91,8 @@ const Contact = (props: Props) => {
           <div className="formheader">
             {language === "de" ? (
               <>
-                <h1>Habe ich ihr Interesse geweckt?</h1>
-                <h2>Kontaktieren sie mich!</h2>
+                <h1>Habe ich Ihr Interesse geweckt?</h1>
+                <h2>Kontaktieren Sie mich!</h2>
               </>
             ) : (
               <>
