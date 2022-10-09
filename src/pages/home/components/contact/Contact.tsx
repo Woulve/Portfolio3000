@@ -87,18 +87,19 @@ const Contact = (props: Props) => {
     <div className="container" id="Contact">
       <div className="content">
         <div className="contactcontent">
-          {language === "de" ? (
-            <>
-              <h1>Habe ich ihr Interesse geweckt?</h1>
-              <h2>Kontaktieren sie Mich!</h2>
-            </>
-          ) : (
-            <>
-              <h1>Did I peak your interest?</h1>
-              <h2>Send me a message!</h2>
-            </>
-          )}
-
+          <div className="formheader">
+            {language === "de" ? (
+              <>
+                <h1>Habe ich ihr Interesse geweckt?</h1>
+                <h2>Kontaktieren sie Mich!</h2>
+              </>
+            ) : (
+              <>
+                <h1>Did I peak your interest?</h1>
+                <h2>Send me a message!</h2>
+              </>
+            )}
+          </div>
           <form onSubmit={validate_send}>
             <div className="contactform">
               <div className="personinfo">
@@ -213,7 +214,6 @@ const Contact = (props: Props) => {
                   className="sendresult"
                 >
                   <p>{result.text}</p>
-                  {/* <h3>Success!</h3> */}
                 </m.div>
               ) : (
                 <></>

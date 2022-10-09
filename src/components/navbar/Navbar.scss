@@ -36,6 +36,11 @@
     justify-content: space-around;
     backdrop-filter: blur(3px);
     background-color: #1b1b1b80;
+    #navItems {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
   }
 }
 
