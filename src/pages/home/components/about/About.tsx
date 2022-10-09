@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { LanguageContext } from "App";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import "./About.scss";
-import meImage from "./me.png";
+import meImage from "./me.webp";
 
 type Props = {};
 
@@ -30,7 +30,7 @@ const About = (props: Props) => {
               viewport={{ once: true }}
               src={meImage}
               alt="Me"
-              width="480px"
+              className="meImage"
             ></m.img>
             <m.div
               initial={{ x: 300, opacity: 0 }}
@@ -53,22 +53,23 @@ const About = (props: Props) => {
                 <>
                   <p>
                     Ich bin ein junger Fachinformatiker für
-                    Anwendungsentwicklung, mit Erfahrung in einer vielzahl von
+                    Anwendungsentwicklung, mit Erfahrung in einer Vielzahl von
                     Entwicklungsumgebungen, und Freude am Entwickeln. Abgesehen
-                    von meiner Ausbildung, habe ich mir sämtliches Wissen und
-                    Programmiersprachen, von STM32 Mikrocontrollern bis zum
-                    Fullstack Web Development selber beigebracht.
+                    von meiner Ausbildung habe ich mir sämtliche Kenntnisse und
+                    Programmiersprachen, von embedded STM32 Development auf
+                    Hardware-Ebene mit C, bis zum Fullstack Web Development mit
+                    React in meiner Freizeit selbst beigebracht.
                   </p>
                 </>
               ) : (
                 <>
                   <p>
                     I am a Junior Software Developer with experience in a
-                    variety of technological environments and a passion for
-                    technology and programming. Apart from my in-firm training,
-                    I gathered all my knowledge and programming skills, from
-                    STM32 Microcontroller Development to Fullstack Web
-                    development by myself.
+                    variety of technological environments, and a passion for
+                    programming. Apart from my in-firm training, I gathered all
+                    my knowledge and programming skills, from STM32
+                    Microcontroller Development with C, to Fullstack Web
+                    development with React by myself.
                   </p>
                 </>
               )}

@@ -11,6 +11,13 @@
   z-index: -10;
 }
 
+.meImage {
+  min-width: 300px;
+  max-width: 500px;
+  width: 22%;
+  height: auto;
+}
+
 #aboutContainer {
   display: flex;
   flex-direction: row;
@@ -59,6 +66,13 @@
 }
 
 @media (orientation: portrait) {
+  .meImage {
+    min-width: 200px;
+    max-width: 300px;
+    width: 22%;
+    height: auto;
+  }
+
   .backgroundBar {
     display: none;
   }

@@ -1,7 +1,10 @@
 .skilltable {
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(3px);
   width: 100%;
+  padding: 10px;
+  border-radius: 20px;
   margin-bottom: 90px;
+  margin-right: 20px;
   .skillitemslist {
     width: fit-content;
     margin-right: 30px;
@@ -23,13 +26,13 @@
     position: absolute;
     width: 100%;
     // bottom: -30%;
-    bottom: 70%;
+    bottom: 75%;
     display: flex;
     flex-basis: auto;
     flex-direction: row;
     .levelbar {
       // position: absolute;
-      height: 490%;
+      height: 520%;
       // height: 200%;
       width: 3px;
       background-color: #36363679;

@@ -96,7 +96,7 @@ const Contact = (props: Props) => {
               </>
             ) : (
               <>
-                <h1>Did I peak your interest?</h1>
+                <h1>Did I pique your interest?</h1>
                 <h2>Send me a message!</h2>
               </>
             )}

@@ -82,13 +82,30 @@ const Skills = (props: Props) => {
             <div className="skilltextright">
               {language === "de" ? (
                 <p>
-                  Diese Website benutzt eine Vielzahl an modernen Technologien
-                  und Frameworks, ist performant, und Mobile-Fähig.
+                  Diese Website ist mit dem React Framework entstanden,
+                  performant und Mobile-Fähig. <br />
+                  Ich besitze gute Kenntnisse in der Entwicklung auf
+                  Hardware-Ebene, möchte jedoch zukünftig meine Fähigkeiten in
+                  Hardwarefernen Umgebungen, wie z.B. im Web-Development (sowohl
+                  Front- als auch Backend), Mobile-Development,
+                  Desktop-Development, und API development verbessern.
+                  <br />
+                  <br />
+                  Ich bin ein Fan von Effizienz und modernen Technologien, und
+                  motiviert neues zu lernen.
                 </p>
               ) : (
                 <p>
-                  This Website uses a number of modern Technologies and
-                  Frameworks, is performant and Mobile-Capable.
+                  This Website was written using the React Framework, is
+                  Performance-optimized, and Mobile-capable.
+                  <br />I have good knowledge in the Development with
+                  Hardware-close environments, but my future goal is to improve
+                  my capabilities in more abstracted environments, e.g.
+                  Web-Development (both Frontend & Backend), Mobile-Development,
+                  Desktop-Development and API-Development.
+                  <br />
+                  <br />I am a fan of efficiency and modern technologies, and I
+                  am motivated to learn new skills.
                 </p>
               )}
             </div>

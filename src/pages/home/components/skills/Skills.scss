@@ -18,6 +18,13 @@
   // justify-content: center;
   width: 100%;
   // height: fit-content;
+  p {
+    font-weight: 400;
+    text-shadow: 1px 1px #3f3838;
+    height: 100%;
+    margin-top: 40px;
+    font-size: 1rem;
+  }
 }
 
 .skilltextcontainer {
@@ -27,7 +34,7 @@
   // margin: 70px;
   // margin-left: 10%;
   // margin-right: 10%;
-  width: 80vw;
+  width: 85vw;
   // margin-bottom: 80px;
 }
 
