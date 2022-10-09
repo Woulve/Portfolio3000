@@ -91,7 +91,7 @@ const Contact = (props: Props) => {
             {language === "de" ? (
               <>
                 <h1>Habe ich ihr Interesse geweckt?</h1>
-                <h2>Kontaktieren sie Mich!</h2>
+                <h2>Kontaktieren sie mich!</h2>
               </>
             ) : (
               <>

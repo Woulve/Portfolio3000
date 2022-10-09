@@ -24,7 +24,7 @@ const items: linkItem[] = [
     key: 3,
     url: "Contact",
     titleger: "Kontakt",
-    titleen: "Contakt",
+    titleen: "Contact",
   },
 ];
 
