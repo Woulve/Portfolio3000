@@ -88,7 +88,7 @@ const Skills = (props: Props) => {
                   Hardware-Ebene, möchte jedoch zukünftig meine Fähigkeiten in
                   Hardwarefernen Umgebungen, wie z.B. im Web-Development (sowohl
                   Front- als auch Backend), Mobile-Development,
-                  Desktop-Development, und API development verbessern.
+                  Desktop-Development, und API-Development verbessern.
                   <br />
                   <br />
                   Ich bin ein Fan von Effizienz und modernen Technologien, und
