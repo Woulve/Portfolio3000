@@ -166,7 +166,7 @@ const Contact = (props: Props) => {
                     onChange={handleFormChange}
                     className="textarea"
                     name="message"
-                    placeholder="z.B. Du bist eingestellt!"
+                    placeholder="text hier eingeben"
                   />
                 ) : (
                   <TextareaAutosize
@@ -174,7 +174,7 @@ const Contact = (props: Props) => {
                     onChange={handleFormChange}
                     className="textarea"
                     name="message"
-                    placeholder="e.g. we want to hire you on the spot!"
+                    placeholder="enter text here"
                   />
                 )}
               </div>
